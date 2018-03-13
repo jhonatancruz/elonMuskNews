@@ -17,6 +17,7 @@
     <link href="static/css/blog.css" rel="stylesheet">
     <link rel="icon" href="static/img/elonmusk.png" sizes="16x20" type="image/png">
     <script type="text/javascript" src="static/js/instafeed.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -37,19 +38,18 @@
           </div>
         </div>
       </header>
-
+      <!-- navbar  -->
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-          <a class="p-2 text-muted" href="#">His Twitter</a>
-          <a class="p-2 text-muted" href="#">His Instagram</a>
-          <a class="p-2 text-muted" href="#">Recent News</a>
-          <a class="p-2 text-muted" href="#">Breaking News</a>
+          <a class="p-2 text-muted" href="#twitter">His Twitter</a>
+          <a class="p-2 text-muted" href="#twitter">His Instagram</a>
+          <a class="p-2 text-muted" href="#recentNews">Recent News</a>
           <a class="p-2 text-muted" href="#">Tesla</a>
           <a class="p-2 text-muted" href="#">SpaceX</a>
           <a class="p-2 text-muted" href="#">The Boring Company</a>
         </nav>
       </div>
-
+      <!-- most recent news  -->
       <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
           <h1 class="display-4 font-italic">{{ allNews["headlines"][0] }}</h1>
@@ -58,46 +58,27 @@
           <p class="lead mb-0"><a href="{{ allNews['urls'][0] }}" class="text-white font-weight-bold">Continue reading...</a></p>
         </div>
       </div>
-
-      <div class="row mb-2">
+      <!-- twitter  -->
+      <div class="row mb-2" id="twitter">
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
               <a class="twitter-timeline" href="https://twitter.com/elonmusk" data-tweet-limit="1"></a>
               <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-              <!-- <strong class="d-inline-block mb-2 text-primary">World</strong>
-              <h3 class="mb-0">
-                <a class="text-dark" href="#">Featured post</a>
-              </h3>
-
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#">Continue reading</a> -->
             </div>
-            <!-- <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap"> -->
           </div>
         </div>
+        <!-- instagram -->
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
               <div id="instafeed"></div>
-
-            <!-- <strong class="d-inline-block mb-2 text-success">Design</strong>
-            <h3 class="mb-0">
-              <a class="text-dark" href="#">Post title</a>
-            </h3>
-            <div class="mb-1 text-muted">Nov 11</div>
-            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-            <a href="#">Continue reading</a>
+              <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BfgRX-lgIt6/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BfgRX-lgIt6/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Falcon fairing half as seen from our catcher’s mitt in boat form, Mr. Steven. No apparent damage from reentry and splashdown.</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/elonmusk/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Elon Musk</a> (@elonmusk) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-02-22T15:36:59+00:00">Feb 22, 2018 at 7:36am PST</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+            </div>
           </div>
-          <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
-        </div> -->
+        </div>
 
-      </div>
-      </div>
-    </div>
-
-    <main role="main" class="container">
+    <main role="main" class="container" id="recentNews">
       <div class="row">
         <div class="col-md-8 blog-main">
           <h3 class="pb-3 mb-4 font-italic border-bottom">
@@ -137,40 +118,83 @@
           </div>
         </div>
 
+        <br>
+
+        <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src="{{ allNews['imgUrls'][4] }}" alt="elonmusk" width="220" height="180">
+          <div class="card-body">
+            <h5 class="card-title">{{allNews["headlines"][4]}}</h5>
+            <p class="lead mb-0"><a href="{{ allNews['urls'][4] }}">Continue reading...</a></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{allNews["providedBy"][4]}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="{{ allNews['imgUrls'][5] }}" alt="elonmusk" width="220" height="180">
+          <div class="card-body">
+            <h5 class="card-title">{{allNews["headlines"][5]}}</h5>
+            <p class="lead mb-0"><a href="{{ allNews['urls'][5] }}">Continue reading...</a></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{allNews["providedBy"][5]}}</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="{{ allNews['imgUrls'][6] }}" alt="elonmusk" width="220" height="180">
+          <div class="card-body">
+            <h5 class="card-title">{{allNews["headlines"][6]}}</h5>
+            <p class="lead mb-0"><a href="{{ allNews['urls'][6] }}">Continue reading...</a></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{allNews["providedBy"][6]}}</small>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <!--  -->
+
+      <br>
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            Tesla
+          </h3>
+
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="{{ allTesla['imgUrls'][1] }}" alt="elonmusk" width="220" height="180">
+            <div class="card-body">
+              <h5 class="card-title">{{allTesla["headlines"][1]}}</h5>
+              <p class="lead mb-0"><a href="{{allTesla['urls'][1] }}">Continue reading...</a></p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">{{allTesla["providedBy"][1]}}</small>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{{ allTesla['imgUrls'][2] }}" alt="elonmusk" width="220" height="180">
+            <div class="card-body">
+              <h5 class="card-title">{{allTesla["headlines"][2]}}</h5>
+              <p class="lead mb-0"><a href="{{ allTesla['urls'][2] }}">Continue reading...</a></p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">{{allTesla["providedBy"][2]}}</small>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{{ allTesla['imgUrls'][3] }}" alt="elonmusk" width="220" height="180">
+            <div class="card-body">
+              <h5 class="card-title">{{allTesla["headlines"][3]}}</h5>
+              <p class="lead mb-0"><a href="{{ allTesla['urls'][3] }}">Continue reading...</a></p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">{{allTesla["providedBy"][3]}}</small>
+            </div>
+          </div>
+        </div>
+
           <!-- <div class="blog-post">
-            <h2 class="blog-post-title">Sample blog post</h2>
-            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
-
-            <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-            <hr>
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-            <blockquote>
-              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </blockquote>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <h2>Heading</h2>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            <pre><code>Example code block</code></pre>
-            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-            <ol>
-              <li>Vestibulum id ligula porta felis euismod semper.</li>
-              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-            </ol>
-            <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-          </div><! /.blog-post -->
-
-          <div class="blog-post">
             <h2 class="blog-post-title">Another blog post</h2>
             <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
 
@@ -180,7 +204,7 @@
             </blockquote>
             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
             <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          </div><!-- /.blog-post -->
+          </div>
 
           <div class="blog-post">
             <h2 class="blog-post-title">New feature</h2>
@@ -196,12 +220,12 @@
             <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
           </div><!-- /.blog-post -->
 
-          <nav class="blog-pagination">
+          <!-- <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-          </nav>
+          </nav> -->
 
-        </div><!-- /.blog-main -->
+        </div>
 
         <aside class="col-md-4 blog-sidebar">
           <div class="p-3 mb-3 bg-light rounded">
@@ -209,7 +233,7 @@
             <p class="mb-0">We are dedicated to providing the latest Elon Musk News.</p>
           </div>
 
-          <div class="p-3">
+          <!-- <div class="p-3">
             <h4 class="font-italic">Archives</h4>
             <ol class="list-unstyled mb-0">
               <li><a href="#">March 2014</a></li>
@@ -225,14 +249,14 @@
               <li><a href="#">May 2013</a></li>
               <li><a href="#">April 2013</a></li>
             </ol>
-          </div>
+          </div> -->
 
           <div class="p-3">
-            <h4 class="font-italic">Elsewhere</h4>
+            <h4 class="font-italic">More About Us</h4>
             <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
+              <li><a href="https://github.com/jhonatancruz/elonMuskNews">GitHub</a></li>
+              <!-- <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li> -->
             </ol>
           </div>
         </aside><!-- /.blog-sidebar -->
@@ -255,7 +279,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
     <!-- from the local -->
 
 
