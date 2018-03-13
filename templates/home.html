@@ -44,7 +44,7 @@
           <a class="p-2 text-muted" href="#twitter">His Twitter</a>
           <a class="p-2 text-muted" href="#twitter">His Instagram</a>
           <a class="p-2 text-muted" href="#recentNews">Recent News</a>
-          <a class="p-2 text-muted" href="#">Tesla</a>
+          <a class="p-2 text-muted" href="#tesla">Tesla</a>
           <a class="p-2 text-muted" href="#">SpaceX</a>
           <a class="p-2 text-muted" href="#">The Boring Company</a>
         </nav>
@@ -157,7 +157,7 @@
       <!--  -->
 
       <br>
-          <h3 class="pb-3 mb-4 font-italic border-bottom">
+          <h3 class="pb-3 mb-4 font-italic border-bottom" id-"tesla">
             Tesla
           </h3>
 
@@ -194,36 +194,44 @@
           </div>
         </div>
 
-          <!-- <div class="blog-post">
-            <h2 class="blog-post-title">Another blog post</h2>
-            <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
+        <br>
+            <h3 class="pb-3 mb-4 font-italic border-bottom" id-"spacex">
+              SpaceX
+            </h3>
 
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-            <blockquote>
-              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </blockquote>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="{{ allspaceX['imgUrls'][1] }}" alt="elonmusk" width="220" height="180">
+              <div class="card-body">
+                <h5 class="card-title">{{allspaceX["headlines"][1]}}</h5>
+                <p class="lead mb-0"><a href="{{allspaceX['urls'][1] }}">Continue reading...</a></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">{{allspaceX["providedBy"][1]}}</small>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{{ allspaceX['imgUrls'][2] }}" alt="elonmusk" width="220" height="180">
+              <div class="card-body">
+                <h5 class="card-title">{{allspaceX["headlines"][2]}}</h5>
+                <p class="lead mb-0"><a href="{{ allspaceX['urls'][2] }}">Continue reading...</a></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">{{allspaceX["providedBy"][2]}}</small>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{{ allspaceX['imgUrls'][3] }}" alt="elonmusk" width="220" height="180">
+              <div class="card-body">
+                <h5 class="card-title">{{allspaceX["headlines"][3]}}</h5>
+                <p class="lead mb-0"><a href="{{ allspaceX['urls'][3] }}">Continue reading...</a></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">{{allspaceX["providedBy"][3]}}</small>
+              </div>
+            </div>
           </div>
 
-          <div class="blog-post">
-            <h2 class="blog-post-title">New feature</h2>
-            <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
-
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
-
-          <!-- <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="#">Older</a>
-            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-          </nav> -->
 
         </div>
 
