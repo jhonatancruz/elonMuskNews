@@ -25,16 +25,16 @@
       <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-4 pt-1">
-            <a class="text-muted" href="#">Subscribe</a>
+            <!-- <a class="text-muted" href="#">Subscribe</a> -->
           </div>
           <div class="col-4 text-center">
             <a class="blog-header-logo text-dark" href="#">Elon Musk News</a>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg> -->
             </a>
-            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+            <!-- <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>  -->
           </div>
         </div>
       </header>
@@ -45,8 +45,8 @@
           <a class="p-2 text-muted" href="#twitter">His Instagram</a>
           <a class="p-2 text-muted" href="#recentNews">Recent News</a>
           <a class="p-2 text-muted" href="#tesla">Tesla</a>
-          <a class="p-2 text-muted" href="#">SpaceX</a>
-          <a class="p-2 text-muted" href="#">The Boring Company</a>
+          <a class="p-2 text-muted" href="#spacex">SpaceX</a>
+          <a class="p-2 text-muted" href="#boringCompany">The Boring Company</a>
         </nav>
       </div>
       <!-- most recent news  -->
@@ -118,55 +118,27 @@
           </div>
         </div>
 
-        <br>
-
-        <div class="card-deck">
-          <div class="card">
-            <img class="card-img-top" src="{{ allNews['imgUrls'][4] }}" alt="elonmusk" width="220" height="180">
-          <div class="card-body">
-            <h5 class="card-title">{{allNews["headlines"][4]}}</h5>
-            <p class="lead mb-0"><a href="{{ allNews['urls'][4] }}">Continue reading...</a></p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">{{allNews["providedBy"][4]}}</small>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="{{ allNews['imgUrls'][5] }}" alt="elonmusk" width="220" height="180">
-          <div class="card-body">
-            <h5 class="card-title">{{allNews["headlines"][5]}}</h5>
-            <p class="lead mb-0"><a href="{{ allNews['urls'][5] }}">Continue reading...</a></p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">{{allNews["providedBy"][5]}}</small>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="{{ allNews['imgUrls'][6] }}" alt="elonmusk" width="220" height="180">
-          <div class="card-body">
-            <h5 class="card-title">{{allNews["headlines"][6]}}</h5>
-            <p class="lead mb-0"><a href="{{ allNews['urls'][6] }}">Continue reading...</a></p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">{{allNews["providedBy"][6]}}</small>
-          </div>
-        </div>
-      </div>
-
-      <!--  -->
-      <!--  -->
-
       <br>
-          <h3 class="pb-3 mb-4 font-italic border-bottom" id-"tesla">
+          <h3 class="pb-3 mb-4 font-italic border-bottom" id="tesla">
             Tesla
           </h3>
 
           <div class="card-deck">
             <div class="card">
-              <img class="card-img-top" src="{{ allTesla['imgUrls'][1] }}" alt="elonmusk" width="220" height="180">
+              <img class="card-img-top" src="{{ allTesla['imgUrls'][0] }}" alt="elonmusk" width="220" height="180">
+            <div class="card-body">
+              <h5 class="card-title">{{allTesla["headlines"][0]}}</h5>
+              <p class="lead mb-0"><a href="{{allTesla['urls'][0] }}">Continue reading...</a></p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">{{allTesla["providedBy"][0]}}</small>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{{ allTesla['imgUrls'][1] }}" alt="elonmusk" width="220" height="180">
             <div class="card-body">
               <h5 class="card-title">{{allTesla["headlines"][1]}}</h5>
-              <p class="lead mb-0"><a href="{{allTesla['urls'][1] }}">Continue reading...</a></p>
+              <p class="lead mb-0"><a href="{{ allTesla['urls'][1] }}">Continue reading...</a></p>
             </div>
             <div class="card-footer">
               <small class="text-muted">{{allTesla["providedBy"][1]}}</small>
@@ -182,29 +154,29 @@
               <small class="text-muted">{{allTesla["providedBy"][2]}}</small>
             </div>
           </div>
-          <div class="card">
-            <img class="card-img-top" src="{{ allTesla['imgUrls'][3] }}" alt="elonmusk" width="220" height="180">
-            <div class="card-body">
-              <h5 class="card-title">{{allTesla["headlines"][3]}}</h5>
-              <p class="lead mb-0"><a href="{{ allTesla['urls'][3] }}">Continue reading...</a></p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">{{allTesla["providedBy"][3]}}</small>
-            </div>
-          </div>
         </div>
 
         <br>
-            <h3 class="pb-3 mb-4 font-italic border-bottom" id-"spacex">
+            <h3 class="pb-3 mb-4 font-italic border-bottom" id="spacex">
               SpaceX
             </h3>
 
             <div class="card-deck">
               <div class="card">
-                <img class="card-img-top" src="{{ allspaceX['imgUrls'][1] }}" alt="elonmusk" width="220" height="180">
+                <img class="card-img-top" src="{{ allspaceX['imgUrls'][0] }}" alt="elonmusk" width="220" height="180">
+              <div class="card-body">
+                <h5 class="card-title">{{allspaceX["headlines"][0]}}</h5>
+                <p class="lead mb-0"><a href="{{allspaceX['urls'][0] }}">Continue reading...</a></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">{{allspaceX["providedBy"][0]}}</small>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{{ allspaceX['imgUrls'][1] }}" alt="elonmusk" width="220" height="180">
               <div class="card-body">
                 <h5 class="card-title">{{allspaceX["headlines"][1]}}</h5>
-                <p class="lead mb-0"><a href="{{allspaceX['urls'][1] }}">Continue reading...</a></p>
+                <p class="lead mb-0"><a href="{{ allspaceX['urls'][1] }}">Continue reading...</a></p>
               </div>
               <div class="card-footer">
                 <small class="text-muted">{{allspaceX["providedBy"][1]}}</small>
@@ -220,17 +192,46 @@
                 <small class="text-muted">{{allspaceX["providedBy"][2]}}</small>
               </div>
             </div>
-            <div class="card">
-              <img class="card-img-top" src="{{ allspaceX['imgUrls'][3] }}" alt="elonmusk" width="220" height="180">
-              <div class="card-body">
-                <h5 class="card-title">{{allspaceX["headlines"][3]}}</h5>
-                <p class="lead mb-0"><a href="{{ allspaceX['urls'][3] }}">Continue reading...</a></p>
+          </div>
+
+          <br>
+              <h3 class="pb-3 mb-4 font-italic border-bottom" id="boringCompany">
+                The Boring Company
+              </h3>
+
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top" src="{{ allboringCompany['imgUrls'][0] }}" alt="elonmusk" width="220" height="180">
+                <div class="card-body">
+                  <h5 class="card-title">{{allboringCompany["headlines"][0]}}</h5>
+                  <p class="lead mb-0"><a href="{{allboringCompany['urls'][0] }}">Continue reading...</a></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">{{allboringCompany["providedBy"][0]}}</small>
+                </div>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">{{allspaceX["providedBy"][3]}}</small>
+              <div class="card">
+                <img class="card-img-top" src="{{ allboringCompany['imgUrls'][1] }}" alt="elonmusk" width="220" height="180">
+                <div class="card-body">
+                  <h5 class="card-title">{{allboringCompany["headlines"][1]}}</h5>
+                  <p class="lead mb-0"><a href="{{ allboringCompany['urls'][1] }}">Continue reading...</a></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">{{allboringCompany["providedBy"][1]}}</small>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="{{ allboringCompany['imgUrls'][2] }}" alt="elonmusk" width="220" height="180">
+                <div class="card-body">
+                  <h5 class="card-title">{{allboringCompany["headlines"][2]}}</h5>
+                  <p class="lead mb-0"><a href="{{ allboringCompany['urls'][2] }}">Continue reading...</a></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">{{allboringCompany["providedBy"][2]}}</small>
+                </div>
               </div>
             </div>
-          </div>
+
 
 
         </div>
