@@ -7,6 +7,7 @@ app= Flask(__name__)
 
 
 def refreshNews():
+    print("retrieving data")
     global allNews, allTesla, allspaceX, allboringCompany
     #all elon musk news
     elon= elonMuskNews("elon musk")
@@ -24,7 +25,7 @@ def refreshNews():
     allspaceX= spaceX.getEverything()
 
     #all boring company news
-    boringCompany= elonMuskNews("elon musk")
+    boringCompany= elonMuskNews("boring company")
     boringCompany.getData()
     allboringCompany= boringCompany.getEverything()
 
@@ -36,13 +37,13 @@ def run_schedule():
 
 @app.route("/")
 def main():
-    print("finished")
     return render_template("home.html", allNews=allNews, allTesla=allTesla, allspaceX=allspaceX,
                             allboringCompany=allboringCompany)
 
 refreshNews()
+
 if __name__== "__main__":
-    schedule.every(1).minutes.do(refreshNews)
+    schedule.every(30).minutes.do(refreshNews)
     t = Thread(target=run_schedule)
     t.start()
     app.run(debug=True)
