@@ -22,4 +22,4 @@ twilio==6.9.0
 tzlocal==1.5.1
 urllib3==1.22
 wapy==1.0.0
-Werkzeug==0.12.2
+Werkzeug==0.15.3
